@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Tower of Hanoi </title>
+  <meta name="Generator" content="NPP-Plugin">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+ <body>
+  
+<canvas id="c" height="375" width="375"></canvas>
+<script>
+document.body.style.cssText="background:#EEE;text-align:center;margin:100px;";function n(){var cs=document.getElementById('c'),c=cs.getContext("2d"),t=[[],[],[],[]],x,y,s=0,cr,l=5,d=-1,l=l>0?l:5,w,W=l*10+80,h=20,H=l*h+h,i,p;for(i=l;i>0;t[1].push(i--));cs.width=W*3;cs.height=H;cs.style.cursor="pointer";function u(p){return t[p][t[p].length-1]}function b(v,w,x,y,z){c.fillStyle=v;c.fillRect(w,x,y,z)}function k(){c.clearRect(0,0,W*3,H);b("#FFA",(d-1)*W,0,W,H);for(p=1;p<4;p++){b("#663",(p-0.5)*W-2,0,4,H);for(i in t[p]){w=t[p][i]*10+40;b((p==s&&i==t[p].length-1)?"#F55":t[p][i]%2?"#AAB":"#667",(p-0.5)*W-w/2,H-h-i*h,w,h)}}}; cs.onmousemove=function(e){d=Math.ceil((e.pageX-e.target.offsetLeft)/W);k()};cs.onmouseout=function(){d=-1;k()};cs.onmousedown=function(){if(s){if(d==s){s=0}else if(!u(d)||u(d)>u(s)){t[d].push(t[s].pop());s=0;if(t[3].length==l){alert('Yeay!');n();return}}}else if(u(d)){s=d}k()};k()}n()
+    </script>
+ </body>
+</html>

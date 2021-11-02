@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> clean </title>
+  <meta name="Generator" content="NPP-Plugin">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+ <body>
+  
+<canvas id="c" height="375" width="375"></canvas>
+<script>
+var d=document,e=d.body,f="childNodes",g="className";e.removeChild(e.children[0]);function j(a,b){var c=d.createElement(b);a.appendChild(c);return c}j(e,"style").innerHTML="table{border-spacing:0}div{width:8px;height:8px;border:1px solid #444}div:hover{background:#888}.b div{background:#800}.o div{background:#00C}";var k=j(e,"table"),l=j(e,"h2"),m=50,n=50,p=8,q=0;function r(a,b){for(var c=0;c<a;++c)b(c)}function s(){l.innerHTML=(p==0&&n>0?"LOSE.":p)+" : "+(n==0?"WIN!":n)}function t(a,b){w(a,b,-1,0);w(a,b,1,0);w(a,b,0,-1);w(a,b,0,1)}function w(a,b,c,u){++q;(function v(h,i){if(h<0||h>=m||i<0||i>=m){if(--q==0){--p;s()}}else{var o=k[f][i][f][h];if(o[g]=="o"){o[g]="";--n;s();--q;t(h,i,c,u)}else{o[g]="b";setTimeout(function(){o[g]="";c!=0?v(h+c,i):v(h,i+u)},25)}}})(a,b)}r(m,function(a){var b=j(k,"tr");r(m,function(c){j(j(b,"td"),"div").onclick=function(){p>0&&n>0&&q==0&&t(c,a)}})});r(n,function(){for(;;){var a=k[f][Math.floor(Math.random()*m)][f][Math.floor(Math.random()*m)];if(a[g]!="o"){a[g]="o";break}}});s()
+    </script>
+ </body>
+</html>

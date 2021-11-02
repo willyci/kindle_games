@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Minesweeper </title>
+  <meta name="Generator" content="NPP-Plugin">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+ <body>
+  
+<canvas id="c" height="375" width="375"></canvas>
+<script>
+A=Function;B='p';K='for(i=0;i<T;++i)';b=A('X.stroke();X.closePath();X.beginPath()');E=document.body;C=E.children[0];$=0;X=C.getContext('2d');X.m=X.moveTo;X.l=X.lineTo;r=A(B,'X.fillText(M[p]<0?"X":l[p]=M[p],p%t*w+6,~~(p/t)*w+15);');g='C.onclick=';h=A(B,'X.fillStyle="#"+p');i=0;I=A(B,'for(k in Y=V[p%t]){var q=p+Y[k];q<0||q<T&&M[q]>=0&&++M[q]}');j=A(B,'X.strokeStyle="#"+p');k=0;L=A('X.m(i,0);X.l(i,O);X.m(0,i);X.l(O,i)');M=[];l=[];t=10;T=100;O=200;C.width=C.height=O;u=A(B,'if(p>=0&&p<T){M[p]&&r(p);if(!M[p]){l[p]=M[p]="~";r(p);var v,Y;for(v in Y=V[p%t])u(p+Y[v])}}');v=11;w=20;y=A(B,K+'M[i]<0&&r(i);'+g+'null');m=[-v,-t,-9,-1,1,9,t,v];n=[-t,-9,1,t,v];o=[-v,-t,-1,9,t];V=[n,m,m,m,m,m,m,m,m,o];E.style.margin=0;eval(K+'M[i]=Math.random()<0.2?-1:0');eval(K+'M[i]<0&&I(i)');h('ccc');X.fillRect(0,0,O,O);j('eee');for(i=0.5;i<O;i+=w)L();b();j('aaa');for(i=19.5;i<O;i+=w)L();b();h('000');z=A("h('0d0');y()");eval(g+'A("e","var p=~~(e.pageX/w)+~~(e.pageY/w)*t;M[p]<0?y():M[p]?r(p):u(p);$=0;'+K+'M[i]>=0&&!l[i]&&++$;!$&&z()")')
+    </script>
+ </body>
+</html>
